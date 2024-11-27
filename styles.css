@@ -1,0 +1,549 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light background color for a softer look */
+}
+
+/* Sidebar Navigation Styles */
+.sidebar {
+    position: fixed; /* Fix the sidebar in place */
+    top: 0; /* Start at the top of the viewport */
+    left: 0; /* Align it to the left of the viewport */
+    width: 250px; /* Set a fixed width for the sidebar */
+    height: 100%; /* Full height of the viewport */
+    background: linear-gradient(180deg, #4a4e69, #22223b); /* Harmonized gradient background */
+    padding: 20px; /* Add padding to the sidebar */
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.sidebar h2 {
+    color: #f2e9e4; /* Soft light color for sidebar heading */
+    margin-top: 0; /* Remove top margin */
+    font-size: 28px; /* Increase font size for heading */
+    font-family: 'Georgia', serif; /* Elegant font for heading */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar li {
+    margin: 15px 0; /* Space between list items */
+}
+
+.sidebar li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #f2e9e4; /* Light color for links */
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Center items vertically */
+    padding: 12px 15px; /* Add padding to links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.sidebar li a:hover {
+    background-color: rgba(242, 233, 228, 0.2); /* Light background on hover */
+    color: #f2e9e4; /* Change text color on hover */
+    transform: translateX(5px); /* Subtle slide effect on hover */
+}
+
+.sidebar li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+    color: #f2e9e4; /* Luxurious color for icons */
+    transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+.sidebar li a:hover i {
+    color: #22223b; /* Change icon color on hover */
+}
+
+/* Main Content Styles */
+.container {
+    background-color: wheat; /* Set the background color of the dashboard */
+    padding: 30px; /* Optional: Add some padding for spacing */
+    margin-left: 21.5%;
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling for the main content */
+}
+
+.main-content {
+    background-color: white; /* White background for main content */
+    padding: 20px; /* Padding for main content */
+    margin-left: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Section Styles */
+h1 {
+    color: #2c3e50; /* Darker text color for main heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+h2 {
+    color: #2980b9; /* Blue color for section headings */
+    border-bottom: 2px solid #2980b9; /* Underline for section headings */
+    padding-bottom: 5px; /* Space below the heading */
+}
+
+.success {
+    color: green; /* Green color for success messages */
+    text-align: center; /* Center success messages */
+}
+
+.error {
+    color: red; /* Red color for error messages */
+    text-align: center; /* Center error messages */
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px; /* Space below forms */
+    background-color: #ecf0f1; /* Light background for forms */
+    padding: 15px; /* Padding inside forms */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #34495e; /* Darker text color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 3px; /* Rounded corners for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #2980b9; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="submit"] {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #27ae60; /* Bootstrap success color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 3px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #219653; /* Darker green on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center footer text */
+    margin-top: 20px; /* Space above footer */
+    color: #777; /* Lighter text color */
+}
+
+/* Recent Activities Styles */
+.activities {
+    margin-top: 20px; /* Space above the activities section */
+}
+
+.activity-list {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Space between cards */
+}
+
+.activity-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Center items vertically */
+}
+
+.activity-card i {
+    color: #27ae60; /* Green color for icons */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+}
+
+.activity-card p {
+    margin: 0; /* Remove default margin */
+    color: #34495e; /* Darker text color for activity description */
+}
+
+/* Team Members Styles */
+.team {
+    margin-top: 20px; /* Space above the team section */
+}
+
+.team-member-list {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Space between cards */
+}
+
+.team-member-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Center items vertically */
+    width: calc(30% - 20px); /* Responsive width for cards */
+}
+
+.member-info {
+    flex-grow: 1; /* Allow text to take available space */
+}
+
+.team-member-card h3 {
+    margin: 0; /* Remove default margin */
+    color: #2c3e50; /* Darker text color for member name */
+}
+
+.team-member-card p {
+    margin: 5px 0 0; /* Space above role */
+    color: #7f8c8d; /* Lighter color for role */
+}
+
+.team-member-card i {
+    color: #2980b9; /* Blue color for icons */
+    font-size: 40px; /* Icon size */
+}
+
+/* Project Table Styles */
+#projectTable {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+#projectTable thead {
+    background-color: #2980b9; /* Header background color */
+    color: #ffffff; /* Header text color */
+}
+
+#projectTable th, #projectTable td {
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #bdc3c7; /* Light border for cells */
+}
+
+#projectTable th {
+    font-weight: bold; /* Bold text for headers */
+}
+
+#projectTable tbody tr {
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#projectTable tbody tr:hover {
+    background-color: #ecf0f1; /* Light background color on hover */
+}
+
+#projectTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+#projectTable tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
+}
+
+.team-members {
+    transition: all 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.add-team-member {
+    transition: all 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.update-profile {
+    /*max-width: 500px; /* Set a maximum width for the section */
+   /* margin: 20px auto; /* Center the section horizontally with margin */
+    padding: 30px; /* Add padding */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.update-profile h2 {
+    color: #2c3e50; /* Darker color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: center; /* Center the heading */
+}
+
+.form-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    color: #34495e; /* Darker color for labels */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="submit"] {
+    padding: 12px; /* Padding inside button */
+    background-color: #27ae60; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    width: 100%; /* Full width for button */
+}
+
+input[type="submit"]:hover {
+    background-color: #219653; /* Darker green on hover */
+}
+
+.success {
+    color: green; /* Green color for success messages */
+    margin-bottom: 15px; /* Space below success message */
+}
+
+.error {
+    color: red; /* Red color for error messages */
+    margin-bottom: 15px; /* Space below error message */
+}
+
+p a {
+    color: #2980b9; /* Link color */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the link */
+    display: block; /* Make the link a block element */
+    margin-top: 15px; /* Space above the link */
+}
+
+p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+ 
+
+/* Add Member Container Styles */
+.add-member-container {
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px; /* Margin around the container */
+}
+
+.add-member-container h2 {
+    color: #2c3e50; /* Darker color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+.add-member-container label {
+    margin-bottom: 5px; /* Space below labels */
+    color: #34495e; /* Darker color for labels */
+    font-weight: bold; /* Bold labels */
+    display: block; /* Make labels block elements */
+}
+
+.add-member-container input[type="text"],
+.add-member-container input[type="email"],
+.add-member-container select {
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.add-member-container input[type="submit"] {
+    padding: 12px; /* Padding inside button */
+    background-color: #27ae60; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    width: 100%; /* Full width for button */
+}
+
+.add-member-container input[type="submit"]:hover {
+    background-color: #219653; /* Darker green on hover */
+}
+
+.add-member-container p {
+    text-align: center; /* Center the link */
+}
+
+.add-member-container p a {
+    color: #2980b9; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.add-member-container p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Add Project Container Styles */
+.add-project-container {
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Styles */
+.add-project-container h2 {
+    text-align: center; /* Center the heading */
+    color: #2c3e50; /* Darker color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.add-project-container label {
+    margin-bottom: 5px; /* Space below labels */
+    color: #34495e; /* Darker color for labels */
+    font-weight: bold; /* Bold labels */
+    display: block; /* Make labels block elements */
+}
+
+.add-project-container input[type="text"],
+.add-project-container select,
+.add-project-container input[type="date"] {
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.add-project-container input[type="submit"] {
+    padding: 12px; /* Padding inside button */
+    background-color: #27ae60; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.add-project-container input[type="submit"]:hover {
+    background-color: #219653; /* Darker green on hover */
+}
+
+.add-project-container a {
+    display: block; /* Make the link a block element */
+    text-align: center; /* Center the link */
+    margin-top: 15px; /* Space above the link */
+    color: #2980b9; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.add-project-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.statistics-cards {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between cards */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.card {
+    background-color: #454e56; /* Light background for a clean look */
+    color: #333; /* Dark text color for readability */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+    border: 1px solid #161616; /* Light border for definition */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    background-color: rgb(223, 160, 43); /* Attractive background color on hover */
+    color: #ffffff; /* Change text color to white on hover */
+}
+
+.card h3 {
+    margin: 10px 0 5px; /* Adjusted margin for better spacing */
+    font-size: 1.5em; /* Font size for the title */
+    color: rgb(0, 11, 20); /* White color for the title */
+    font-weight: bold; /* Bold font for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
+}
+
+.card p {
+    font-size: 2em; /* Font size for the count */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #333; /* Dark text color */
+}
+
+.card-icon {
+    font-size: 3em; /* Larger icon size */
+    color: #ffffff; /* White color for icons */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width on smaller screens */
+        min-width: 250px; /* Minimum width for cards */
+    }
+}
+

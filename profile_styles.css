@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333; /* Dark text color for headings */
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff; /* White background for forms */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the container */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"] {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below input fields */
+}
+
+input[type="submit"] {
+    background-color: #5cb85c; /* Green background for submit button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+/* Success and Error Messages */
+.success {
+    color: #5cb85c; /* Green color for success messages */
+    margin-bottom: 15px; /* Space below messages */
+}
+
+.error {
+    color: #d9534f; /* Red color for error messages */
+    margin-bottom: 15px; /* Space below messages */
+}
+
+/* Manage Team Members Table */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light border */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+
+tr:hover {
+    background-color: #f9f9f9; /* Light gray background on row hover */
+}
+
+/* Profile Picture */
+img {
+    border-radius: 50%; /* Circular profile picture */
+}
